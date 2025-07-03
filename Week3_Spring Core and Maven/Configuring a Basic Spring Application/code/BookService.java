@@ -14,8 +14,5 @@ public class BookService {
         }
     }
 
-    // For Exercise 2 (Setter injection)
-    public void setBookRepository(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
+   
 }
