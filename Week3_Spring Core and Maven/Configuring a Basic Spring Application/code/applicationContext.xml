@@ -7,7 +7,7 @@
     <bean id="bookRepository" class="com.library.repository.BookRepository" />
 
     <bean id="bookService" class="com.library.service.BookService">
-        <!-- DI to be added in Exercise 2 -->
+        
     </bean>
 
 </beans>
