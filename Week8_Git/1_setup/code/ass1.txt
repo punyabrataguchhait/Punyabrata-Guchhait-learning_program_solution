@@ -1,0 +1,78 @@
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~
+$ mkdir GitDemo
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~
+$ cd GitDemo
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo
+$ git init
+Initialized empty Git repository in C:/Users/PUNYABRATA/GitDemo/.git/
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ echo "Welcome togit Hands-On Lab" > welcome.txt
+3
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ ls
+welcome.txt
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ cat welcome.txt
+Welcome togit Hands-On Lab
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git add welcome.txt
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   welcome.txt
+
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit
+[master (root-commit) c1cbeea] - Added welcome.txt file - Contains welcome message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git remote add origin https://gitlab.com/punyabrataguchhait-group/gitdemo.git
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git pull origin master
+info: please complete authentication in your browser...
+fatal: couldn't find remote ref master
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for master, visit:
+remote:   https://gitlab.com/punyabrataguchhait-group/gitdemo/-/merge_requests/new?merge_request%5Bsource_branch%5D=master
+remote:
+To https://gitlab.com/punyabrataguchhait-group/gitdemo.git
+ * [new branch]      master -> master
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$
+
