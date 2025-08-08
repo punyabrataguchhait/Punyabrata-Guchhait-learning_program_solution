@@ -1,0 +1,58 @@
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git checkout master
+M       .gitignore
+Already on 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore1
+        debug.log
+        log/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git branch -a
+  GitNewBranch
+* master
+  remotes/origin/GitNewBranch
+  remotes/origin/master
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ main
+bash: main: command not found
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git pull origin master
+From https://gitlab.com/punyabrataguchhait-group/gitdemo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (12/12), 1.37 KiB | 701.00 KiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for master, visit:
+remote:   https://gitlab.com/punyabrataguchhait-group/gitdemo/-/merge_requests/new?merge_request%5Bsource_branch%5D=master
+remote:
+To https://gitlab.com/punyabrataguchhait-group/gitdemo.git
+   e5ace35..f7c4c7b  master -> master
+
