@@ -1,0 +1,54 @@
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ # Create branch
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git branch GitNewBranch
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ #list branches
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git branch -a
+  GitNewBranch
+* master
+  remotes/origin/master
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ #switch to branch
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitNewBranch)
+$ echo "this is a new branch file" > branchfile.txt
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitNewBranch)
+$ git add branchfile.txt
+warning: in the working copy of 'branchfile.txt', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitNewBranch)
+$ git commit -m "Added branchfile.txxt in GitNewBranch"
+[GitNewBranch e55ebe1] Added branchfile.txxt in GitNewBranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branchfile.txt
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitNewBranch)
+$ git push-u origin GitNewBranch
+git: 'push-u' is not a git command. See 'git --help'.
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitNewBranch)
+$ git push -u origin GitNewBranch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 120.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for GitNewBranch, visit:
+remote:   https://gitlab.com/punyabrataguchhait-group/gitdemo/-/merge_requests/new?merge_request%5Bsource_branch%5D=GitNewBranch
+remote:
+To https://gitlab.com/punyabrataguchhait-group/gitdemo.git
+ * [new branch]      GitNewBranch -> GitNewBranch
+branch 'GitNewBranch' set up to track 'origin/GitNewBranch'.
