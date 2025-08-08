@@ -1,0 +1,144 @@
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~
+$ cd GitDemo
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (GitWork)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore1
+        debug.log
+        log/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git checkout -b GitWork
+fatal: a branch named 'GitWork' already exists
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ echo "<message>Hello from GitWork branch</message" > hello.xml
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit -m "Added hello.xml in GitWork branch"
+[master bda7fa6] Added hello.xml in GitWork branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ echo "<message>Updated content from GitWork branch</message>" > hello.xml
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit -m "Updated hello.xml in GitWork branch"
+[master 6daafac] Updated hello.xml in GitWork branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ echo "<message>Hello from Master branch</message>" > hello.xml
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit -m "Added hello.xml in Master branch"
+[master 39cbae2] Added hello.xml in Master branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git log --online --graph --decorate --all
+fatal: unrecognized argument: --online
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git log --oneline --graph --decorate --all
+* 39cbae2 (HEAD -> master) Added hello.xml in Master branch
+* 6daafac Updated hello.xml in GitWork branch
+* bda7fa6 Added hello.xml in GitWork branch
+| * e55ebe1 (origin/GitNewBranch, GitNewBranch) Added branchfile.txxt in GitNewBranch
+|/
+* e5ace35 (origin/master, GitWork) Added .gitignore to ignorre log files and log folder
+* c1cbeea - Added welcome.txt file - Contains welcome message
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git merge GitWork
+Already up to date.
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ notepad++ hello.xml
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit -m "Resolved merge conflict in hello .xml"
+[master f7c4c7b] Resolved merge conflict in hello .xml
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ echo "*.orig" >> .gitignore
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git commit -m "Ignore backup files"
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore1
+        debug.log
+        log/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git branch -d GitWork
+Deleted branch GitWork (was e5ace35).
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git push origin --delete GitWork
+error: unable to delete 'GitWork': remote ref does not exist
+error: failed to push some refs to 'https://gitlab.com/punyabrataguchhait-group/gitdemo.git'
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ ^[[200~git fetch --all
+bash: $'\E[200~git': command not found
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ git branch -r
+  origin/GitNewBranch
+  origin/master
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$ ^C
+
+PUNYABRATA@DESKTOP-TJL09DP MINGW64 ~/GitDemo (master)
+$
